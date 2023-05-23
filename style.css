@@ -10,7 +10,7 @@ body, html {
     color: white;
 
     font-family: monospace;
-    font-size: 5rem;
+    font-size: 35px;
 
     display: flex;
     justify-content: center;
@@ -19,5 +19,5 @@ body, html {
 }
 
 #speed {
-    font-size: 20rem;
+    font-size: 150px;
 }
