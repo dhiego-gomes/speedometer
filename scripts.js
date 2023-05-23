@@ -6,9 +6,7 @@ let watchId = null
 
 speedometer.addEventListener('click', ()=> {
     if (!watchId) {
-        setTimeout(function(){
-            watchId = navigator.geolocation.watchPosition(updatePosition, handleError, option)
-        }, 100)        
+        watchId = navigator.geolocation.watchPosition(updatePosition, handleError, option)
     } else {
         navigator.geolocation.clearWatch(watchId)
         watchId = null
