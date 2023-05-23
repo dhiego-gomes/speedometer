@@ -1,16 +1,16 @@
-const speedometer = document.querySelector('#speedometer')
-const speed = document.querySelector('#speed')
+const velocimetro = document.querySelector('#velocimetro')
+const velocidade = document.querySelector('#velocidade')
 const option = { enableHighAccuracy: true }
 
 let watchId = null
 
-speedometer.addEventListener('click', ()=> {
+velocimetro.addEventListener('click', ()=> {
     if (!watchId) {
         watchId = navigator.geolocation.watchPosition(updatePosition, handleError, option)
     } else {
         navigator.geolocation.clearWatch(watchId)
         watchId = null
-        speed.textContent = 0
+        velocidade.textContent = 0
     }
 })
 
@@ -18,7 +18,7 @@ function updatePosition(position) {
     if (position.coords.speed === null)
         return
     
-    speed.textContent = (position.coords.speed * 3.6).toFixed(1)
+    velocidade.textContent = (position.coords.speed * 3.6).toFixed(1)
 }
 
 function handleError(error) {
